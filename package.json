@@ -1,0 +1,13 @@
+{
+  "name": "bugbot",
+  "version": "0.0.0",
+  "description": "bugbot",
+  "main": "app.js",
+  "author": {
+    "name": "Dima"
+  },
+  "dependencies": {
+    "chromedriver": "^2.25.1",
+    "selenium-webdriver": "3.0.0-beta-3"
+  }
+}
