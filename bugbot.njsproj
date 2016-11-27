@@ -5,7 +5,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>bugbot</Name>
     <RootNamespace>bugbot</RootNamespace>
-    <ScriptArguments>27598 "Resolution text" 12345</ScriptArguments>
+    <ScriptArguments>-n 27184 -m "Resolution text" -r 12345 -l user -p password</ScriptArguments>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -39,10 +39,12 @@
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\node\" />
+    <Folder Include="typings\globals\q\" />
     <Folder Include="typings\globals\selenium-webdriver\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\q\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\selenium-webdriver\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>

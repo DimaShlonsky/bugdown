@@ -8,6 +8,9 @@
   },
   "dependencies": {
     "chromedriver": "^2.25.1",
-    "selenium-webdriver": "3.0.0-beta-3"
+    "meow": "^3.7.0",
+    "q": "^1.4.1",
+    "selenium-webdriver": "3.0.0-beta-3",
+    "simple-get": "^2.3.0"
   }
 }
