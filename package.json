@@ -1,7 +1,7 @@
 {
-  "name": "bugbot",
+  "name": "bugdown",
   "version": "0.0.0",
-  "description": "bugbot",
+  "description": "bugdown - a bot for managing BugUp bugs",
   "main": "app.js",
   "author": {
     "name": "Dima"
