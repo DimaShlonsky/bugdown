@@ -7,9 +7,9 @@ var fs = require('fs');
 var cli = meow(`
 Usage
 
-$ bugbot resolveBug --bugNumber|-n <bug number> --resolutionMessage|-m <resolution message> --resolvedInRevision|-r <resolution revision> <params> [options]
+$ bugdown resolveBug --bugNumber|-n <bug number> --resolutionMessage|-m <resolution message> --resolvedInRevision|-r <resolution revision> <params> [options]
 OR
-$ bugbot resolveBug --bySvn [options] <path> <depth> <messagefile> <revision> <error> <cwd>
+$ bugdown resolveBug --bySvn [options] <path> <depth> <messagefile> <revision> <error> <cwd>
 
 Where <params> are:
 --loginName|-l  The login name to the BugUp site
