@@ -1,4 +1,6 @@
-﻿var bugdown = require('./bugdown');
+﻿#! node
+
+var bugdown = require('./bugdown');
 var meow = require('meow');
 var fs = require('fs');
 

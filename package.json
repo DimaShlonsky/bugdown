@@ -6,6 +6,8 @@
   "author": {
     "name": "Dima"
   },
+  "bin": "./cli.js",
+  "private": true,
   "dependencies": {
     "chromedriver": "^2.25.1",
     "meow": "^3.7.0",
