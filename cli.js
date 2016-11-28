@@ -1,5 +1,6 @@
 ﻿var bugdown = require('./bugdown');
 var meow = require('meow');
+var fs = require('fs');
 
 var cli = meow(`
 Usage
@@ -35,10 +36,14 @@ $bugbot svn-hook c:\srodev\my-working-copy --loginName JohnD --password 12345
     });
 
 if (cli.input[0] == "resolveBug") {
+    var resolutionText,
+        bugN,
+        resolvedInRev;
+
     if ("bySvn" in cli.flags) {
         //PATH DEPTH MESSAGEFILE REVISION ERROR CWD
-        var messageFile = cli.input[3],
-            resolvedInRev = cli.input[4];
+        var messageFile = cli.input[3];
+        resolvedInRev = cli.input[4];
 
         var content = fs.readFileSync(messageFile);
         resolutionText = content.toString();
@@ -56,8 +61,8 @@ if (cli.input[0] == "resolveBug") {
         resolvedInRev = cli.flags.r;
     }
 
-    loginName = cli.flags.l;
-    password = cli.flags.p;
+    var loginName = cli.flags.l;
+    var password = cli.flags.p;
 
     if (bugN == undefined ||
         resolutionText == undefined ||
