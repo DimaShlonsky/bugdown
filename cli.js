@@ -7,11 +7,9 @@ var fs = require('fs');
 var cli = meow(`
 Usage
 
-$ bugbot resolve --bugNumber|-n <bug number> --resolutionMessage|-m <resolution message> --resolvedInRevision|-r <resolution revision> <params> [options]
+$ bugbot resolveBug --bugNumber|-n <bug number> --resolutionMessage|-m <resolution message> --resolvedInRevision|-r <resolution revision> <params> [options]
 OR
-$ bugbot resolve --bySvn [options] <path> <depth> <messagefile> <revision> <error> <cwd>
-OR
-$ bugbot resolve svn-hook <working copy dir> <params> [options]
+$ bugbot resolveBug --bySvn [options] <path> <depth> <messagefile> <revision> <error> <cwd>
 
 Where <params> are:
 --loginName|-l  The login name to the BugUp site
@@ -21,9 +19,6 @@ And options are:
 --webdriverServer|-s    The URL of the WebDriver server (defult is http://localhost:4444/wd/hub)
 --bugupUrl|b            The base URL of the bugup site (default is http://mobile.toptix-online.com:8080/InformUP)
 
-EXAMPLES:
-Hooking bugbot to run after commit on your working copy, run:
-$bugbot svn-hook c:\srodev\my-working-copy --loginName JohnD --password 12345
 
 `, {
         alias: {
