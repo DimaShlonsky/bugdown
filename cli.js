@@ -29,7 +29,8 @@ And options are:
             p: 'passwrod',
             s: 'webdriverServer',
             b: 'bugupUrl'
-        }
+        },
+        boolean: ['bySvn']
     });
 
 if (cli.input[0] == "resolveBug") {
