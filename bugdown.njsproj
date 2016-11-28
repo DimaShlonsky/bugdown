@@ -5,7 +5,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>bugdown</Name>
     <RootNamespace>bugbot</RootNamespace>
-    <ScriptArguments>-n 27184 -m "Resolution text" -r 12345 -l user -p password</ScriptArguments>
+    <ScriptArguments>resolveBug -n 27184 -m "Resolution text" -r 12345 -l user -p password</ScriptArguments>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -14,7 +14,7 @@
     <ProjectGuid>b1c46e05-a9be-4b99-a1fe-eef72d6fdf5a</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>cli.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -32,7 +32,8 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
+    <Compile Include="bugdown.js" />
+    <Compile Include="cli.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
