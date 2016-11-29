@@ -19,7 +19,7 @@ In TortoiseSvn's settings, add a new Hook script like this:
 
 ![Alt](http://i.imgur.com/QQiAQAd.png "Hook type='Post-Commit hook', Working copy path='C:\\svn-sources\\working-copy', Command LIne to Execute='cmd.exe /c bugdown resolveBug --bySvn -l JohnDoe -p \"s3cr3tPwd\"'")
 
-This will run bugdown to fill the following fileds of the bug: 
+This will look for the bug number in the commit message (denoted by "#") and run bugdown to fill the following fileds of that bug: 
 
 * Status = Resolved
 * Reason = Bug fixed
