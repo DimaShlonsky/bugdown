@@ -2,6 +2,12 @@
 
 Utility for automating managing BugUp bugs using WebDriver. Uses Chrome to navigate to the given bug on the BugUp site and fill in resolution details as provided
 
+# Install
+
+```
+$ npm install -g git+https://github.com/DimaShlonsky/bugdown.git
+```
+
 # Help
 ```
 $ bugdown --help 
