@@ -98,7 +98,7 @@ exports.resolveBug = function (bugN, resolvedInRev, resolutionText, loginName, p
         })
             .then(function (url) {
                 let pathname = Url.parse(url).pathname.toLowerCase();
-                if (pathname.endsWith("/login.aspx") || pathname.endsWith("errorSession.htm")) {
+                if (pathname.endsWith("/login.aspx") || pathname.endsWith("errorsession.htm")) {
                     return login()
                         .then(function () {
                             return browser.get(bugUrl);
@@ -145,7 +145,15 @@ exports.resolveBug = function (bugN, resolvedInRev, resolutionText, loginName, p
 
 
                 browser
-                    .findElement(By.css("#_ctl2_FixedBy option[value='" + loginName + "']"))
+                    .findElement(function (browser) {
+                        var opts = browser.findElements(By.css("#_ctl2_FixedBy option"));
+                        var promise = require("selenium-webdriver/lib/promise");
+                        return promise.filter(opts, function (opt) {
+                            return opt.getAttribute("value").then(function (attr) {
+                                return attr.toLowerCase() == loginName.toLowerCase();
+                            });
+                        });
+                    })
                     .then(function (e) {
                         e.click();
                     });

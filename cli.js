@@ -38,7 +38,7 @@ if (cli.input[0] == "resolveBug") {
         bugN,
         resolvedInRev;
 
-    if ("bySvn" in cli.flags) {
+    if (cli.flags.bySvn) {
         //PATH DEPTH MESSAGEFILE REVISION ERROR CWD
         var messageFile = cli.input[3];
         resolvedInRev = cli.input[4];
